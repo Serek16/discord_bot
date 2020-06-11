@@ -2,7 +2,7 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 
 const PREFIX = '!';
-const CHANNEL_ID = '713051305123250260';
+const CHANNEL_ID = '716433061335662746';
 
 client.on('ready', () => {
     console.log('This bot is online!');

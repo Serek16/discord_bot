@@ -4,7 +4,7 @@ const client = new Discord.Client();
 const PREFIX = '!';
 const CHANNEL_ID = '713051305123250260';
 
-bot.on('ready', () => {
+client.on('ready', () => {
     console.log('This bot is online!');
 
     const channel = client.channels.get(CHANNEL_ID);
@@ -22,7 +22,7 @@ bot.on('ready', () => {
     });
 });
 
-bot.on('message', message => {
+client.on('message', message => {
     let args = message.content.substring(PREFIX.length).split(" ");
 
     switch(args[0]) {

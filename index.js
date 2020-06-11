@@ -27,12 +27,12 @@ client.on('message', message => {
 
     switch(args[0]) {
         case 'laguna':
-            message.chanel.sendMessage('brum brum')
+            message.reply('brum brum')
             break;
     }
 
     if (message.content === "odpalam lagune") {
-        message.chanel.sendMessage('brum brum');
+        message.reply('brum brum');
     }
 });
 

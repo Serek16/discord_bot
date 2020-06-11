@@ -7,7 +7,7 @@ const CHANNEL_ID = '713051305123250260';
 client.on('ready', () => {
     console.log('This bot is online!');
 
-    const channel = client.channels.get(CHANNEL_ID);
+    const channel = client.channels.cache.get(CHANNEL_ID);
 
     if (!channel) {
         return console.error("The channel does not exist!");

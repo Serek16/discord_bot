@@ -2,12 +2,11 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 
 const PREFIX = '!';
-const CHANNEL_ID = '716433061335662746';
 
 client.on('ready', () => {
     console.log('This bot is online!');
 
-    const channel = client.channels.cache.get(CHANNEL_ID);
+    const channel = client.channels.cache.get(process.env.channel_id);
 
     if (!channel) {
         return console.error("The channel does not exist!");

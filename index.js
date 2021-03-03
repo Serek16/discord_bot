@@ -1,10 +1,12 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 
+require('dotenv').config();
+
 client.on('ready', () => {
     console.log('Bot is online!');
 
-    const channel = client.channels.cache.get(process.env.channel_id);
+    const channel = client.channels.cache.get(process.env.CHANNEL_ID);
 
     if (!channel) {
         return console.error("The channel does not exist!");
@@ -19,4 +21,4 @@ client.on('ready', () => {
     });
 });
 
-client.login(process.env.token);
+client.login(process.env.TOKEN);

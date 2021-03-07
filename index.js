@@ -24,8 +24,10 @@ client.on('ready', () => {
       // Yay, it worked!
       console.log("Successfully connected!");
       
-      // Play music
-      client.player.play(channel, process.env.URL);
+      // Play music if URL var exist
+      if (process.env.URL) {
+        client.player.play(channel, process.env.URL);
+      }
       
     }).catch(e => {
       // Oh no, it errored! Let's log it to console :)

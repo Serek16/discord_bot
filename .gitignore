@@ -117,3 +117,6 @@ dist
 
 # Environment variables
 .env
+
+# When uses repl.it hosting
+.replit

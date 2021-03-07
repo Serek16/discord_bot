@@ -1,6 +1,7 @@
 const Discord = require('discord.js');
 const { Player } = require("discord-music-player");
 const client = new Discord.Client();
+const keepAlive = require('./server');
 
 require('dotenv').config();
 
@@ -35,4 +36,5 @@ client.on('ready', () => {
     });
 });
 
+keepAlive();
 client.login(process.env.TOKEN);
